@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cadastro-usuarios-deployment
+  labels:
+    app: cadastro-usuarios
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: cadastro-usuarios
+  template:
+    metadata:
+      labels:
+        app: cadastro-usuarios
+    spec:
+      containers:
+        - name: cadastro-usuarios
+          image: cadastro-usuarios-image:latest  
+          ports:
+            - containerPort: 3018  
+          env:
+            - name: DB_HOST
+              value: mysql  
+            - name: DB_USER
+              value: root  
+            - name: sua_senha
+              value: senha_secreta  
+            - name: DB_NAME
+              value: cadastro_db  
+            - name: DB_PORT
+              value: "3306"  
+            - name: JWT_SECRET
+              value: minha_chave_secreta  # Segredo para JWT
+            - name: JWT_EXPIRES_IN
+              value: "3600" 
+

@@ -1,0 +1,74 @@
+version: '3.9'
+
+services:
+  cadastro-usuarios-microservices:
+    build: /home/emersondev/cadastro-usuarios-microservices/
+    environment:
+      - DB_HOST=mysql-db
+      - DB_USER=root
+      - DB_PASSWORD=Elas1981XP#
+      - DB_NAME=usuariodb
+      - DB_PORT=3306
+      - REDIS_HOST=redis-cache
+      - REDIS_PORT=6379
+    dns:
+      - 8.8.8.8  # DNS do Google
+    ports:
+      - "3018:3018"
+    networks:
+      - microservice-network
+    depends_on:
+      - mysql-db
+      - redis-cache
+
+  mysql-db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: usuariodb
+      MYSQL_ROOT_PASSWORD: Elas1981XP#  # Aqui está a senha do root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./databases/mysql/data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    networks:
+      - microservice-network
+
+  redis-cache:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - microservice-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus3
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - microservice-network
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana3
+    ports:
+      - "3000:3000"
+    networks:
+      - microservice-network
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin3
+    ports:
+      - "9411:9411"
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge

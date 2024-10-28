@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cadastro-usuarios-service
+  labels:
+    app: cadastro-usuarios
+spec:
+  type: LoadBalancer  
+  selector:
+    app: cadastro-usuarios
+  ports:
+    - protocol: TCP
+      port: 80  
+      targetPort: 3081
+
