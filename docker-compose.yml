@@ -6,7 +6,7 @@ services:
     environment:
       - DB_HOST=mysql-db
       - DB_USER=root
-      - DB_PASSWORD=Elas1981XP#
+      - DB_PASSWORD=sua-senha
       - DB_NAME=usuariodb
       - DB_PORT=3306
       - REDIS_HOST=redis-cache
@@ -25,7 +25,7 @@ services:
     image: mysql:latest
     environment:
       MYSQL_DATABASE: usuariodb
-      MYSQL_ROOT_PASSWORD: Elas1981XP#  # Aqui está a senha do root
+      MYSQL_ROOT_PASSWORD: sua-senha  # Aqui está a senha do root
     ports:
       - "3306:3306"
     volumes:
