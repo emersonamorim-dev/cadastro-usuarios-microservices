@@ -1,9 +1,17 @@
-### Cadastro Usuários Microservices - Node.js, MySQL, Redis, JWT, Prometheus e Grafana 🚀 🔄 🌐
+#### Cadastro Usuários Microservices - Node.js, MySQL, Redis, JWT, Prometheus e Grafana 🚀 🔄 🌐
 
 Codificação em Javascript com NodeJS 20 para **PeoplePro - Teste Vaga Hospital Sírio Líbanês** de uma aplicação completa de gestão de usuários desenvolvida utilizando tecnologias de ponta como Node.js, MySQL, Redis, JWT, Prometheus e Grafana, alinhada aos princípios de engenharia de software modernos. Nosso foco é fornecer uma aplicação segura, escalável e fácil de manter, incorporando melhores práticas de orientação a objetos, arquitetura limpa, e padrões de design que promovem manutenção eficiente e expansão a longo prazo.
 
 
-## Arquitetura da Aplicação
+#### Arquitetura da Aplicação
+
+Essa aplicação usa Clean Architecture, também chamada de arquitetura em camadas. Cada pasta representa uma camada ou responsabilidade distinta na aplicação:
+
+- domain: Contém entidades e a lógica de negócio, como os modelos e regras que representam o domínio do sistema.
+- infrastructure: Responsável por aspectos externos, como conexão ao banco de dados, serviços de terceiros e implementação de detalhes.
+- interfaces: Pode representar os adaptadores para comunicação com a camada de aplicação, incluindo interfaces para uso nos repositórios ou para abstrações de serviços.
+- middlewares: Contém funções intermediárias utilizadas para manipulação de requisições, como autenticação e autorização.
+- routes: Define as rotas da API, conectando pontos de entrada do sistema com os handlers apropriados.
 
 A aplicação é baseada em uma arquitetura de microserviços distribuídos, utilizando o modelo RESTful para comunicação entre os serviços. Cada componente do sistema segue o princípio de separação de responsabilidades (SRP), promovendo modularidade e escalabilidade.
 
