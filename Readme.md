@@ -1,4 +1,4 @@
-#### Cadastro Usuários Microservices - Node.js, MySQL, Redis, JWT, Prometheus e Grafana 🚀 🔄 🌐
+#### Cadastro Usuários Microservices - Node.js, MySQL, Redis, JWT, Prometheus e Grafana 🚀 🔄 🌐 
 
 Codificação em Javascript com NodeJS 20 para **PeoplePro - Teste Vaga Hospital Sírio Líbanês** de uma aplicação completa de gestão de usuários desenvolvida utilizando tecnologias de ponta como Node.js, MySQL, Redis, JWT, Prometheus e Grafana, alinhada aos princípios de engenharia de software modernos. Nosso foco é fornecer uma aplicação segura, escalável e fácil de manter, incorporando melhores práticas de orientação a objetos, arquitetura limpa, e padrões de design que promovem manutenção eficiente e expansão a longo prazo.
 
