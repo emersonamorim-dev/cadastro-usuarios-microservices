@@ -20,7 +20,7 @@ A aplicação é baseada em uma arquitetura de microserviços distribuídos, uti
 - **Redis**: Cache distribuído para melhorar a performance das requisições de leitura.
 - **JWT**: Para autenticação segura dos usuários.
 - **Prometheus & Grafana**: Para coleta de métricas e visualização da saúde da aplicação.
-- **Ubuntu 24.04 e WSL2**: Aplicação está configurada para rodar dentro do WSL2 com Ubuntu 24.04 com Docker Desktop no Windows.
+- **Ubuntu 24.04 e WSL2**: Aplicação está configurada para rodar dentro do WSL2 com Ubuntu 24.04 e com Docker Desktop no Windows.
 
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 [![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
