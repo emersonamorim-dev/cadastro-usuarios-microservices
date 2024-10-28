@@ -1,7 +1,7 @@
 module.exports = {
   host: process.env.DB_HOST || 'mysql-db',
   user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'Elas1981XP#',
+  password: process.env.DB_PASSWORD || 'sua-senha',
   database: process.env.DB_NAME || 'usuariodb',
   port: process.env.DB_PORT || 3306,
 
